@@ -44,7 +44,7 @@ To run the flask server run command:
 Copy the localhost url and paste it on browser on multiple tabs and run all of them in parallel:
 http://127.0.0.1:5000/querytest?querystring='input_your_desired_query'
 
-
+It will take 10 sec for any unique query to process.
 Notice each and every process will end at same time and have same output if it runs in wait time.
 
 
