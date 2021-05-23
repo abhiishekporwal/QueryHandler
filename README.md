@@ -7,7 +7,7 @@ Let's say we are working on a web service (very high traffic) where you have to 
 
 ### Approach:
 
-This application is based on Flask server and open-sourced in-memory data structure Redis to store every unique query say 'q1', 'q2' etc. in hash as a key along with their response and use time.sleep() to hold the query response. While holding, many queries will come and they will wait until the sleep time over.
+This application is based on Flask server and open-sourced in-memory data structure Redis to store every unique query say 'q1', 'q2' etc. in hash as a key along with their response and use time.sleep() to hold the query response. While holding, many queries will come and they will wait untill current query is processed.
 
 To setup above environment, activate a virtual environment:
 
@@ -20,13 +20,13 @@ Get into virtual_env_name
 
 Install all required packages mentioned in requirement.txt as:
 
-`pip3 install -r requirements.txt \n`
+`pip3 install -r requirements.txt `
 `sudo apt install redis-server    `
 
 
 Clone the repository as:
 
-`git clone https://github.com/abhiishekporwal/QueryHandler.git\n`
+`git clone https://github.com/abhiishekporwal/QueryHandler.git`
 `cd QueryHandler`
 
 To run following server, we first have to start redis-server
@@ -35,7 +35,7 @@ To run following server, we first have to start redis-server
 
 Open a new Terminal, move to virtual environment and set environment variable as:
 
-`export FLASK_APP='app.py'     \n`
+`export FLASK_APP='app.py'`
 `export FLASK_ENV=development  `
 
 To run the flask server run command:
@@ -44,7 +44,7 @@ To run the flask server run command:
 Copy the localhost url and paste it on multiple tabs in browser(Mozilla) or POSTMAN tool where you can select request method as GET and run all of them in parallel  :
 http://127.0.0.1:5000/querytest?querystring='input_your_desired_query'
 
-Notice each and every process will end at same time and have same output if it runs in wait time. It will take x secondsd(e.g. 10 seconds) for any unique query to process and other similar queries will stand still within wait time.
+Notice each query with same query string will end at same time and have same output if hit at the time of processing of same query string. It will take x seconds(e.g. 10 seconds) for any unique query to process and other similar queries will stand still within wait time.
 
 
 
