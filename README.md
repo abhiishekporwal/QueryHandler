@@ -11,7 +11,7 @@ This application is based on Flask server and open-sourced in-memory data struct
 
 To setup above environment, activate a virtual environment:
 
-`virtualenv virtual_env_name         `
+`virtualenv virtual_env_name         \n`
 `source virtual_env_name/bin/activate`
 
 Get into virtual_env_name
@@ -20,13 +20,13 @@ Get into virtual_env_name
 
 Install all required packages mentioned in requirement.txt as:
 
-`pip3 install -r requirements.txt `
+`pip3 install -r requirements.txt \n`
 `sudo apt install redis-server    `
 
 
 Clone the repository as:
 
-`git clone https://github.com/abhiishekporwal/QueryHandler.git`
+`git clone https://github.com/abhiishekporwal/QueryHandler.git\n`
 `cd QueryHandler`
 
 To run following server, we first have to start redis-server
@@ -35,17 +35,17 @@ To run following server, we first have to start redis-server
 
 Open a new Terminal, move to virtual environment and set environment variable as:
 
-`export FLASK_APP='app.py'     `
+`export FLASK_APP='app.py'     \n`
 `export FLASK_ENV=development  `
 
 To run the flask server run command:
 `flask run`
 
-Copy the localhost url and paste it on browser on multiple tabs and run all of them in parallel:
+Copy the localhost url and paste it on multiple tabs in browser(Mozilla) or POSTMAN tool where you can select request method as GET and run all of them in parallel  :
 http://127.0.0.1:5000/querytest?querystring='input_your_desired_query'
 
-It will take 10 sec for any unique query to process.
-Notice each and every process will end at same time and have same output if it runs in wait time.
+Notice each and every process will end at same time and have same output if it runs in wait time. It will take x secondsd(e.g. 10 seconds) for any unique query to process and other similar queries will stand still within wait time.
+
 
 
 
