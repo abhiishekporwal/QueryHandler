@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify
 import time
-from redis import Redis
+import redis
+import os
 
-
-r = Redis(host='localhost', port=6379)
+r = redis.from_url(os.getenv('REDISCLOUD_URL'))
 
 delay_seconds = 10
 
