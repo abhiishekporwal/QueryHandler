@@ -11,8 +11,8 @@ This application is based on Flask server and open-sourced in-memory data struct
 
 To setup above environment, activate a virtual environment:
 
-`virtualenv virtual_env_name         \n`
-`source virtual_env_name/bin/activate`
+`virtualenv virtual_env_name 
+source virtual_env_name/bin/activate`
 
 Get into virtual_env_name
 
@@ -20,14 +20,14 @@ Get into virtual_env_name
 
 Install all required packages mentioned in requirement.txt as:
 
-`pip3 install -r requirements.txt `
-`sudo apt install redis-server    `
+`pip3 install -r requirements.txt 
+ sudo apt install redis-server`
 
 
 Clone the repository as:
 
-`git clone https://github.com/abhiishekporwal/QueryHandler.git`
-`cd QueryHandler`
+`git clone https://github.com/abhiishekporwal/QueryHandler.git 
+ cd QueryHandler`
 
 To run following server, we first have to start redis-server
 
@@ -35,8 +35,8 @@ To run following server, we first have to start redis-server
 
 Open a new Terminal, move to virtual environment and set environment variable as:
 
-`export FLASK_APP='app.py'`
-`export FLASK_ENV=development  `
+`export FLASK_APP='app.py'
+ export FLASK_ENV=development  `
 
 To run the flask server run command:
 `flask run`
